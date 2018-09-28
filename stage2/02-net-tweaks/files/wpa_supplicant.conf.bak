@@ -1,0 +1,8 @@
+country=AU
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+  ssid="d&v"
+  psk=a53b8998feb3477b302981120deb359a8eeb7ace2c2a574eb1d2fbb75cbda17b
+}
