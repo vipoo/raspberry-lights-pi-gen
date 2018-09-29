@@ -9,3 +9,8 @@ install -v -m 644 files/modules             "${ROOTFS_DIR}/etc/modules"
 install -v -m 644 files/lirc_options.conf   "${ROOTFS_DIR}/etc/lirc/lirc_options.conf"
 install -v -m 644 files/ledstrip.lircd.conf "${ROOTFS_DIR}/etc/lirc/lircd.conf.d/ledstrip.lircd.conf"
 
+install -m 644 files/raspberry-lights.service "${ROOTFS_DIR}/etc/systemd/system/raspberry-lights.service"
+
+on_chroot << EOF
+systemctl enable raspberry-lights.service
+EOF
