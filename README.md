@@ -310,6 +310,15 @@ If you wish to build further configurations upon (for example) the lite
 system, you can also delete the contents of `./stage3` and `./stage4` and
 replace with your own contents in the same format.
 
+## Install Systemd service at /home/pi/main-app.service
+
+After image is built, you can place a node app in this location
+
+then run
+
+```bash
+systemctl start main-app.service
+```
 
 ## Skipping stages to speed up development
 
