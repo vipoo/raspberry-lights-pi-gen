@@ -224,9 +224,18 @@ to `./stage2` (if building a minimal system).
 # Example for building a lite system
 echo "IMG_NAME='Raspbian'" > config
 echo "PASSWORD=raspberry" >> config
+
+# Optional
+echo "WIFI_PSK=<PSK>" >> config
+
 touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
 touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
 sudo ./build.sh  # or ./build-docker.sh
+```
+
+Generate the psk using:
+```bash
+wpa_passphrase "d&v" password
 ```
 
 If you wish to build further configurations upon (for example) the lite
