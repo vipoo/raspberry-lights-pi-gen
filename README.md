@@ -283,7 +283,7 @@ maintenance and allows for more easy customization.
 
  - **Stage 5** - The Raspbian Full image. More development
    tools, an email client, learning tools like Scratch, specialized packages
-   like sonic-pi, office productivity, etc.  
+   like sonic-pi, office productivity, etc.
 
 ### Stage specification
 
@@ -297,6 +297,10 @@ to `./stage2` (if building a minimal system).
 ```bash
 # Example for building a lite system
 echo "IMG_NAME='Raspbian'" > config
+
+# Optional
+echo "NODE_VERSION=v8.12.0" >> config
+
 touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
 touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
 sudo ./build.sh  # or ./build-docker.sh
