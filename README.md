@@ -224,6 +224,7 @@ to `./stage2` (if building a minimal system).
 # Example for building a lite system
 echo "IMG_NAME='Raspbian'" > config
 echo "PASSWORD=raspberry" >> config
+echo "RASPI_HOSTNAME=raspberrypi" >> config
 
 # Optional
 echo "WIFI_PSK=<PSK>" >> config
