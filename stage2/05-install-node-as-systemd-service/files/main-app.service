@@ -1,5 +1,5 @@
 [Unit]
-Description=Raspberry Light Service
+Description=Main Node Service
 After=network.target
 
 [Service]
@@ -7,7 +7,6 @@ WorkingDirectory=/home/pi/main-app-service
 ExecStart=/usr/local/bin/npm start
 Restart=on-failure
 User=pi
-#Environment=PORT=8000
 
 [Install]
 WantedBy=multi-user.target
